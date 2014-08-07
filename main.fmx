@@ -1,0 +1,227 @@
+object mainform: Tmainform
+  Left = 0
+  Top = 0
+  Caption = 'roverx1'
+  ClientHeight = 359
+  ClientWidth = 598
+  Fill.Kind = bkGradient
+  Fill.Gradient.Points = <
+    item
+      Color = claBlack
+      Offset = 0.740384638309478800
+    end
+    item
+      Color = xFF202020
+      Offset = 0.884615361690521200
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StartPosition.Y = 1.000000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Fill.Gradient.StopPosition.Y = 0.000000000000000000
+  StyleBook = StyleBook1
+  Visible = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMobile = True
+  DesignerWidth = 598
+  DesignerHeight = 384
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 3
+  DesignerOSVersion = ''
+  object im: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Height = 153.000000000000000000
+    Position.X = 8.000000000000000000
+    Visible = False
+    Width = 813.000000000000000000
+  end
+  object reload: TButton
+    Anchors = [akTop, akRight]
+    Height = 32.000000000000000000
+    Position.X = 550.000000000000000000
+    StyleLookup = 'searcheditbutton'
+    TabOrder = 0
+    Text = 'Reload'
+    Trimming = ttCharacter
+    Width = 32.000000000000000000
+    OnClick = FormShow
+  end
+  object Label1: TLabel
+    AutoSize = True
+    Font.Size = 24.000000000000000000
+    FontColor = claWhitesmoke
+    StyledSettings = [ssFamily, ssStyle]
+    Height = 32.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Text = 'Seleccionar dispositivo:'
+    Width = 255.000000000000000000
+    WordWrap = False
+    Trimming = ttCharacter
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Transparent = True
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Height = 0.000000000000000000
+    Position.Y = 48.000000000000000000
+    TabOrder = 3
+    Width = 1241.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.Font.Size = 18.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Detail.Font.Size = 12.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Detail.TextColor = x00636363
+    ItemAppearanceObjects.ItemObjects.Detail.Height = 12.000000000000000000
+    OnItemClick = ListView1ItemClick
+  end
+  object Brush1: TBrushObject
+    StyleName = 'Brush1'
+    Brush.Kind = bkGradient
+    Brush.Gradient.Points = <
+      item
+        Color = claBlack
+        Offset = 0.740384638309478800
+      end
+      item
+        Color = xFF202020
+        Offset = 0.884615361690521200
+      end>
+    Brush.Gradient.StartPosition.X = 0.500000000000000000
+    Brush.Gradient.StartPosition.Y = 1.000000000000000000
+    Brush.Gradient.StopPosition.X = 0.499999970197677600
+    Brush.Gradient.StopPosition.Y = 0.000000000000000000
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 15
+    OnTimer = Timer1Timer
+    Left = 224
+    Top = 48
+  end
+  object StyleBook1: TStyleBook
+    Left = 168
+    Top = 48
+    ResourcesBin = {464D585F5354594C4520322E350100}
+  end
+  object rojo: TBrushObject
+    StyleName = 'rojo'
+    Brush.Color = xFFFF0202
+  end
+  object verder: TBrushObject
+    StyleName = 'verder'
+    Brush.Color = xFF1EFF0B
+  end
+  object Timer3: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = Timer3Timer
+    Left = 304
+    Top = 16
+  end
+  object Button3: TButton
+    Height = 65.000000000000000000
+    Position.X = 304.000000000000000000
+    Position.Y = 280.000000000000000000
+    TabOrder = 4
+    Text = 'Atras'
+    Trimming = ttCharacter
+    Width = 209.000000000000000000
+    OnMouseDown = Button3MouseDown
+    OnMouseMove = Button3MouseMove
+    OnMouseUp = Button3MouseUp
+  end
+  object Button4: TButton
+    Height = 65.000000000000000000
+    Position.X = 312.000000000000000000
+    Position.Y = 144.000000000000000000
+    TabOrder = 5
+    Text = 'Adelante'
+    Trimming = ttCharacter
+    Width = 201.000000000000000000
+    OnMouseDown = Button4MouseDown
+    OnMouseMove = Button4MouseMove
+    OnMouseUp = Button4MouseUp
+  end
+  object Label7: TLabel
+    FontColor = claChartreuse
+    StyledSettings = [ssFamily, ssSize, ssStyle]
+    Height = 41.000000000000000000
+    Position.X = 240.000000000000000000
+    Position.Y = 96.000000000000000000
+    Text = 'SerialData'
+    Width = 273.000000000000000000
+    WordWrap = False
+    Trimming = ttCharacter
+  end
+  object Button5: TButton
+    Height = 65.000000000000000000
+    Position.X = 520.000000000000000000
+    Position.Y = 208.000000000000000000
+    TabOrder = 7
+    Text = 'Derecha'
+    Trimming = ttCharacter
+    Width = 97.000000000000000000
+    OnMouseDown = Button5MouseDown
+    OnMouseUp = Button5MouseUp
+  end
+  object Button6: TButton
+    Height = 65.000000000000000000
+    Position.X = 200.000000000000000000
+    Position.Y = 208.000000000000000000
+    TabOrder = 8
+    Text = 'Izquierda'
+    Trimming = ttCharacter
+    Width = 97.000000000000000000
+    OnMouseDown = Button6MouseDown
+    OnMouseUp = Button6MouseUp
+  end
+  object Label8: TLabel
+    FontColor = claChartreuse
+    StyledSettings = [ssFamily, ssSize, ssStyle]
+    Height = 23.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 104.000000000000000000
+    Text = 'X Posicion'
+    Width = 193.000000000000000000
+    Trimming = ttCharacter
+  end
+  object Label9: TLabel
+    FontColor = claChartreuse
+    StyledSettings = [ssFamily, ssSize, ssStyle]
+    Height = 23.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 312.000000000000000000
+    Text = 'Gyrodata'
+    Width = 297.000000000000000000
+  end
+  object MotionSensor1: TMotionSensor
+    OnDataChanged = MotionSensor1DataChanged
+    Left = 24
+    Top = 272
+  end
+  object Button7: TButton
+    Height = 65.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 208.000000000000000000
+    TabOrder = 11
+    Text = 'GYRO'
+    Trimming = ttCharacter
+    Width = 97.000000000000000000
+    OnClick = Button7Click
+  end
+  object Rectangle1: TRectangle
+    Fill.Color = claGreenyellow
+    Height = 57.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 144.000000000000000000
+    Width = 89.000000000000000000
+  end
+end
